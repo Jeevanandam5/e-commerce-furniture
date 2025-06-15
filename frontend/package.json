@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "VITE_API_BASE_URL=https://e-commerce-furniture-backend-9vxf.onrender.com vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
