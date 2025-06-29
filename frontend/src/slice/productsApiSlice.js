@@ -5,12 +5,16 @@ const productApiSlice = apiSlice.injectEndpoints({
     endpoints :(builder) =>({
         getproduct :builder.query({
             query:()=>({
-                url: PRODUCT_URL
+                url: PRODUCT_URL,
+                 keepUnusedDataFor: 20,       
+                 refetchOnFocus: false,          
+                 refetchOnReconnect: false,
             })
         }),
         getproductDetails:builder.query({
             query:(id) =>({
-                url:`${PRODUCT_URL}/${id}`
+                url:`${PRODUCT_URL}/${id}`,
+                keepUnusedDataFor: 40,
             })
         })
     })
